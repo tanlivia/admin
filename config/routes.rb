@@ -5,6 +5,7 @@ Blog::Application.routes.draw do
     resources :comments, :only => [:create]
   end
 
+  match 'source' => 'posts#index'
   match ':action' => 'static#:action'
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -55,7 +56,7 @@ Blog::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'static#about'
+  root :to => 'static#home'
 
   # See how all your routes lay out with "rake routes"
 
