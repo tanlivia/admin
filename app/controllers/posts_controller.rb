@@ -7,6 +7,10 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all
 
+    @posts.each do |p|
+      p.body = p.body[0..501] + "..." if p.body.length > 500
+    end
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @posts }

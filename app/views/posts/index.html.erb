@@ -1,11 +1,10 @@
-<h1>Listing posts</h1>
+<h1>管理员界面</h1>
 <%= link_to 'New Post', new_post_path, :class => "btn btn-primary"%>
 
 <ul>
 <% @posts.each do |post| %>
   <h3><%= link_to post.title, post %></h3>
-  <div class="per-post"><%= post.body %><div>
-
+  <div><%= post.body %><div>
 <% end %>
 </ul>
 

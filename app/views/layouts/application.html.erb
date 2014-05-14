@@ -1,14 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Blog</title>
+  <!-- Allow Chinese Character -->
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+  <title>张冰</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/">张冰律师</a>
+      </div>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/home"><i class="fa fa-home"></i> 首页</a></li>
+        <li><a href="/about"><i class="fa fa-shield"></i> 律师简介</a></li>
+        <li><a href="/serve"><i class="fa fa-briefcase"></i> 服务领域</a></li>
+        <li><a href="/case"><i class="fa fa-trophy"></i> 成功案例</a></li>
+        <li><a href="/source"><i class="fa fa-star"></i> 信息资源</a></li>
+        <li><a href="/contact"><i class="fa fa-comment"></i> 联系我们</a></li>
+      </ul>
+    </div>
+  </nav>
 </head>
 <body>
-
+<div  class="container">
 <%= yield %>
-
+</div>
 </body>
 </html>
