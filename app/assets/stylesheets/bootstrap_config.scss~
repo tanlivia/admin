@@ -1,0 +1,10 @@
+@import "bootstrap";
+@import "bootstrap/theme";
+
+.per-post {
+  word-wrap: break-word;
+  width: 1000px;
+}
+
+
+

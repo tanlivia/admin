@@ -1,0 +1,13 @@
+@import "bootstrap";
+@import "bootstrap/theme";
+
+.per-post {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
+
+
+
