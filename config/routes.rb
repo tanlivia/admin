@@ -4,9 +4,9 @@ Blog::Application.routes.draw do
   get "admin" => "sessions#new", :as => "admin"
   get "log_out" => "sessions#destroy", :as => "log_out"
 
-  get "sign_up" => "users#new", :as => "sign_up"
+  # get "sign_up" => "users#new", :as => "sign_up"
 
-  resources :users
+  # resources :users
   resources :sessions
 
   resources :posts do

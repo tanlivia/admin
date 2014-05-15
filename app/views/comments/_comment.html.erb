@@ -1,7 +1,7 @@
 <%= div_for comment do %>
-        <p>
-                <strong>Anonymous posted <%= time_ago_in_words(comment.created_at) %> ago</strong>
-                <br/>
-                <%= comment.body %>
-        </p>
+  <p>
+    <strong>Anonymous posted <%= time_ago_in_words(comment.created_at) %> ago</strong>
+    <br/>
+    <%= comment.body %>
+  </p>
 <% end %>

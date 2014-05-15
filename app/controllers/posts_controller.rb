@@ -1,7 +1,8 @@
 class PostsController < ApplicationController
   
   # Put HTTP Basic authenticate to prevent everybody can access it
-  before_filter :authenticate, :except => [:index, :show]
+  # before_filter :authenticate, :except => [:index, :show]
+  
   # GET /posts
   # GET /posts.json
   def index
@@ -88,10 +89,10 @@ class PostsController < ApplicationController
     end
   end
 
-  private
-  def authenticate
-    authenticate_or_request_with_http_basic do |name, password|
-      name == "admin" && password == "lihui"
-    end
-  end
+  # private
+  # def authenticate
+  #   authenticate_or_request_with_http_basic do |name, password|
+  #     name == "admin" && password == "lihui"
+  #   end
+  # end
 end
