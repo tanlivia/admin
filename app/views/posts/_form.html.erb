@@ -1,15 +1,11 @@
 <%= form_for(@post) do |f| %>
   <% if @post.errors.any? %>
-    <div class="alert alert-block">
-      <button type="button" class="close" data-dismiss="alert">&times;</button>
-      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
-
-      <ul>
-      <% @post.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
+    <!-- <div class="alert alert-block"> -->
+      <!-- <button type="button" class="close" data-dismiss="alert">&times;</button> -->
+      <% str = @post.errors.full_messages.map(&:inspect).join(', ') %>
+      <p class="alert alert-danger"><%= pluralize(@post.errors.count, "error") %> are found:<%= str %></p>
+    <!-- </div> -->
+      <!-- <p class="alert">Post was successfully created.</p> -->
   <% end %>
 
   <div class="form-group">
