@@ -1,19 +1,21 @@
-<h1>Admin Login</h1>
+<div class="admin-panel">
+  <h1 class="text-center">Admin Login</h1>
 
-<%= form_tag sessions_path do %>
-  <div class="form-group">
-    <%= label_tag :username %><br />
-    <div class="input-group input-group-lg">
-      <span class="input-group-addon">@</span>
-      <%= text_field_tag :username, params[:username], class: "form-control" %>
+  <%= form_tag sessions_path do %>
+    <div class="form-group">
+      <%= label_tag :username %><br />
+      <div class="input-group input-group-lg">
+        <span class="input-group-addon">@</span>
+        <%= text_field_tag :username, params[:username], class: "form-control" %>
+      </div>
     </div>
-  </div>
-  <div class="form-group">
-    <%= label_tag :password %><br />
-    <div class="input-group input-group-lg">
-      <span class="input-group-addon">@</span>
-      <%= password_field_tag :password, params[:password], class: "form-control"  %>
+    <div class="form-group">
+      <%= label_tag :password %><br />
+      <div class="input-group input-group-lg">
+        <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+        <%= password_field_tag :password, params[:password], class: "form-control"  %>
+      </div>
     </div>
-  </div>
-  <%= submit_tag "Log in", class: "btn btn-primary"%>
-<% end %>
+    <%= submit_tag "Log in", class: "btn btn-primary full-width"%>
+  <% end %>
+</div>

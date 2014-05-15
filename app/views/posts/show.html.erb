@@ -2,19 +2,21 @@
 
 <%= render :partial => @post %>
 
-<%= link_to 'Back', posts_path, :class => 'btn btn-primary'  %> 
-<%= link_to 'Edit', edit_post_path(@post), :class => 'btn btn-primary' %> 
-<%= button_to "Delete", post_path(@post), {:method => :delete, :class => 'btn btn-danger right'} %>
-
+<%= link_to '后退', posts_path, :class => 'btn btn-primary'  %>
+<% if current_user %> 
+<%= link_to '编辑', edit_post_path(@post), :class => 'btn btn-primary' %> 
+<%= button_to "删除", post_path(@post), {:method => :delete, :class => 'btn btn-danger right'} %>
+<br />
+<% end %>
 <br/>
-<h2>Comments</h2>
+<h2>欢迎留言</h2>
 <div id="comments">
   <%= render :partial => @post.comments %>
 </div>
 <%= form_for [@post, Comment.new] do |f| %>
   <p>
-    <%= f.label :body, "New Comment" %><br/>
+    <%= f.label :body, "写在此处" %><br/>
     <%= f.text_area :body, :class=>"form-control", :rows => 3 %>
   </p>
-  <button type="submit" class="btn btn-primary">发表评论</button>
+  <button type="submit" class="btn btn-primary">发表留言</button>
 <% end %>
