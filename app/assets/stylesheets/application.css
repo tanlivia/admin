@@ -12,6 +12,52 @@
  *= require_tree .
  *= require bootstrap
  */
+.round-and-shadow {
+  box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+  border-radius: 100px;
+  -moz-border-radius: 100px;
+  -khtml-border-radius: 100px;
+  -webkit-border-radius: 100px;
+}
+
+div.home-container {
+  position: relative;
+}
+
+.background-image {
+  height: 300px;
+  width: 100%;
+  position: absolute;;
+  z-index: 0;
+}
+
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 10px;
+  position: absolute;
+  top: 75px;
+  left: 45%;
+  z-index: 1;
+  /*background: url(../images/bing_zhang.jpg) no-repeat;*/
+}
+
+div.body-container {
+  float: left;
+  margin-top:310px;
+}
+
+.right {
+  float: right;
+}
+
+/*.item > img {
+  position: absolute;
+  clip: rect(0px, 900px, 300px, 0px);
+}*/
+
 
 .per-post {
   overflow: hidden;

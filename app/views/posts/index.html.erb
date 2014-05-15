@@ -1,5 +1,10 @@
-<h1>管理员界面</h1>
-<%= link_to 'New Post', new_post_path, :class => "btn btn-primary"%>
+
+<% if current_user %>
+  <h1>Manage Article</h1>
+  <%= link_to 'New Post', new_post_path, :class => "btn btn-primary" %>
+<% else %>
+<h1 class="text-center">信息资源</h1>
+<% end %>
 
 <ul>
 <% @posts.each do |post| %>
