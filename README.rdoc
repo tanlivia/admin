@@ -7,14 +7,12 @@ The database is using default SQLITE3 because of the light data. You can deploy 
 heroku (have to use PostgreSQL for production). In order to deploy to heroku, please 
 follow the following step:
 
-1. First configure remote heroku branch: 
-For more information, please visit https://devcenter.heroku.com/articles/git
+1. First configure remote heroku branch: For more information, please visit https://devcenter.heroku.com/articles/git
        $ heroku create
        $ git remote -v
        $ heroku git:remote -a falling-wind-1624
 
-2. Know your database attributes: 
-Go to your https://postgres.heroku.com/databases, and find the one your just create.
+2. Know your database attributes: Go to your https://postgres.heroku.com/databases, and find the one your just create.
 It will looks like:
        Host ec2-54-225-168-181.compute-1.amazonaws.com
        Database dsabcd1234jk
@@ -41,16 +39,15 @@ There are two links for this simple website. One is for website admin, one is fo
 * For admin, go to https://yourwebsite.com/admin to login;
 * For other viewers, just go to https://yourwebsite.com to view;
 
-There is a hidden link to create the admin username and password:
+There is a hidden link to create the admin username and password: Yes, like the comment said, uncomment them out.
 
 1. Go to config/routes.rb file. You will see the following 3 lines:
       # If you want to create a new username and password, please uncomment the following two lines out.
       # get "sign_up" => "users#new", :as => "sign_up"
       # resources :users
-    Yes, like the comment said, uncomment them out.
+    
 
-2. Go to https://yourwebsite.com/sign_up. Set up your favorate username and password.
-What you set will be the username and password for future Admin login.
+2. Go to https://yourwebsite.com/sign_up. Set up your favorate username and password. What you set will be the username and password for future Admin login.
 
 3. Please go to config/routes.rb file, comment those code again. Since you don't want anybody to be the superuser
 for your website.
