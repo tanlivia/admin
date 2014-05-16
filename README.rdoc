@@ -12,8 +12,7 @@ follow the following step:
        $ git remote -v
        $ heroku git:remote -a falling-wind-1624
 
-2. Know your database attributes: Go to your https://postgres.heroku.com/databases, and find the one your just create.
-It will looks like:
+2. Know your database attributes: Go to your https://postgres.heroku.com/databases, and find the one your just create. It will looks like:
        Host ec2-54-225-168-181.compute-1.amazonaws.com
        Database dsabcd1234jk
        User abcdefgh
@@ -49,8 +48,7 @@ There is a hidden link to create the admin username and password: Yes, like the 
 
 2. Go to https://yourwebsite.com/sign_up. Set up your favorate username and password. What you set will be the username and password for future Admin login.
 
-3. Please go to config/routes.rb file, comment those code again. Since you don't want anybody to be the superuser
-for your website.
+3. Please go to config/routes.rb file, comment those code again. Since you don't want anybody to be the superuser for your website.
 
 
 == Structure 
