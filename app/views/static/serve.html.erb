@@ -16,47 +16,26 @@
   <!-- Slider Content -->
   <div class="carousel-inner">
 
-    <div class="item active">
+    <div class="item active" id="item1">
       <%= image_tag("picture1.jpg", width: "100%", height:"200px", alt: "") %>
-      <div class="carousel-caption">
-        <h2>为中小型企业提供法律和财务系统咨询</h2>
-      </div>
     </div>
-    <div class="item">
+    <div class="item" id="item2">
       <%= image_tag("picture2.jpg", width: "100%", height:"200px", alt: "") %>
-      <div class="carousel-caption">
-        <h2>为公司和企业担任长年法律及财务顾问</h2>
-      </div>
     </div>
-    <div class="item">
-      <%= image_tag("picture3.jpeg", width: "100%", height:"200px", alt: "") %>
-      <div class="carousel-caption">
-        <h2>设立及解散公司</h2>
-      </div>
+    <div class="item" id="item3">
+      <%= image_tag("picture3.jpg", width: "100%", height:"200px", alt: "") %>
     </div>
-    <div class="item">
+    <div class="item" id="item4">
       <%= image_tag("picture4.jpg", width: "100%", height:"200px", alt: "") %>
-      <div class="carousel-caption">
-        <h2>财产规划，遗嘱及信托撰写</h2>
-      </div>
     </div>
-    <div class="item">
+    <div class="item" id="item5">
       <%= image_tag("picture5.jpg", width: "100%", height:"200px", alt: "") %>
-      <div class="carousel-caption">
-        <h2>设置公司财务系统及会计软件(QuickBooks)培训，公司记账，财务报表，代办薪资税和营业税</h2>
-      </div>
     </div>
-    <div class="item">
+    <div class="item" id="item6">
       <%= image_tag("picture6.jpg", width: "100%", height:"200px", alt: "") %>
-      <div class="carousel-caption">
-        <h2>个人和公司报税及规划</h2>
     </div>
-    </div>
-    <div class="item">
-      <%= image_tag("picture8.jpg", width: "100%", height:"200px", alt: "") %>
-      <div class="carousel-caption">
-        <h2>财务，法律文件翻译</h2>
-      </div>
+    <div class="item" id="item7">
+      <%= image_tag("picture7.jpg", width: "100%", height:"200px", alt: "") %>
     </div>
   </div>
 
@@ -70,8 +49,32 @@
 
   <!-- <p>如有任何有关法律及税务方面的疑难，欢迎向张律师咨询</p> -->
 </div>
+<h1 id="page-title" class="text-center">为中小型企业提供法律和财务系统咨询</h1>
 <script>
-$('#carousel').carousel({
-  interval: 8000
-});
+
+
+$(document).ready(function() {
+  $('#carousel-example-generic').carousel({
+    interval: 8000
+  });
+
+  var titles = {
+    "item1": "为中小型企业提供法律和财务系统咨询", 
+    "item2": "为公司和企业担任长年法律及财务顾问", 
+    "item3": "设立及解散公司", 
+    "item4": "财产规划，遗嘱及信托撰写", 
+    "item5": "设置公司财务系统及会计软件(QuickBooks)培训，公司记账，财务报表，代办薪资税和营业税", 
+    "item6": "个人和公司报税及规划", 
+    "item7": "财务，法律文件翻译"
+  }
+
+  $('#carousel-example-generic').on('slid.bs.carousel', function(e) {
+      setTitle();
+  })
+
+  function setTitle() {
+    $("#page-title").html(titles[$("#carousel-example-generic .active").attr('id')])
+  }
+})
+
 </script>
