@@ -1,9 +1,70 @@
 <div>
-  <div class="transbox text-center block">
+  <div class="transbox text-center block full-width">
     <p align="left">析疑，解惑，避免误区，保障您的法律权益，务请联系我们。</p>
     <p align="left"><i class="fa fa-phone-square"></i>电话：510-710-2610</p>
     <p align="left"><i class="fa fa-envelope"></i>电邮：<a href="mailto:bzlawyerandcpa@yahoo.com?Subject=咨询" target="_top">bzlawyerandcpa@yahoo.com</a></p>
     <p align="left"><i class="fa fa-map-marker"></i>地址：16 Southwood Drive, Orinda, CA 94563</p>
   </div>
 
+  <div class="map block">
+    <iframe width="100%" height="300" frameborder="0" style="border:0"
+src="https://www.google.com/maps/embed/v1/place?q=16%20Southwood%20Drive%2C%20Orinda%2C%20CA%2094563&key=AIzaSyDQTHrU8dKDQXDEOHasYR-yBnvXtsF0-hs"></iframe>
+  </div>
+
+  <form class="form-horizontal block contact-form" role="form" id="contactme" action="" method="post" enctype="text/plain">
+    <h3 class="text-center">Contact Me!</h3>
+    <div class="form-group">
+      <label for="firstname" class="col-sm-2 control-label">您的名字</label>
+      <div class="col-sm-8">
+        <input type="text" class="form-control" id="firstname" placeholder="Your First Name">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="lastname" class="col-sm-2 control-label">您贵姓</label>
+      <div class="col-sm-8">
+        <input type="text" class="form-control" id="lastname" placeholder="Your Last Name">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="email" class="col-sm-2 control-label">您的邮箱地址</label>
+      <div class="col-sm-8">
+        <input type="email" class="form-control" id="email" placeholder="Your Email">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="phone" class="col-sm-2 control-label">您的电话</label>
+      <div class="col-sm-8">
+        <input type="text" class="form-control" id="phone" placeholder="Your Phone">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="question" class="col-sm-2 control-label">您的想法或問題</label>
+      <div class="col-sm-8">
+        <textarea class="form-control" rows="4" id="question" placeholder="Any Question?"></textarea>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-8">
+        <input type="reset" value="Reset (重置）" class="btn btn-default"/>
+        <a type="text" class="btn btn-info right" id="submitme" href="">Submit（提交）</a>   
+      </div>
+    </div>
+  </form>
 </div>
+
+<script>
+  $(document).ready(function() {
+    $('#submitme').on('click', function(e) {
+      // $('#submitme').attr('href', 'mailto:bzlawyerandcpa@yahoo.com?Subject=咨询&amp;body=ee'
+      //   + $('#firstname') + $('#email').val());
+      e.preventDefault();
+      document.location.href = 'mailto:bzlawyerandcpa@yahoo.com?Subject=咨询&body=firstname:'
+        + $('#firstname').val() + '%0D%0Alastname: ' + $('#lastname').val()
+        + '%0D%0Aemail: ' + $('#email').val()
+        + '%0D%0Aphone: ' + $('#phone').val()
+        + '%0D%0Aquestion: ' + $('#question').val();
+    })
+
+  })
+</script>
