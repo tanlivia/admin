@@ -1,0 +1,28 @@
+zh:
+  nav:
+    brand: "张冰律师"
+    home: "首页"
+    about: "律师简介"
+    service: "服务领域"
+    case: "成功案例"
+    source: "信息资源"
+    contact: "联系我们"
+
+  source-page:
+    title: "管理员界面：添加删改所发文章"
+    viewall: "[查看所有]"
+    edit-content: "编辑内容"
+    form-title: "题目"
+    form-content: "内容"
+    form-submit: "提交"
+    form-new: "发布新的文章"
+    back: "返回文章列表"
+    comment-title: "欢迎留言"
+    comment-new: "写在此处"
+    comment-submit: "发表留言"
+
+  global:
+    edit: "编辑"
+    delete: "删除"
+    update: "更新"
+    show: "显示"

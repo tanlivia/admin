@@ -1,18 +1,18 @@
 
 <% if current_user %>
-  <h1 class="text-center">管理员界面：添加删改所发文章</h1>
-  <%= link_to 'New Post', new_post_path, :class => "btn btn-primary right" %>
+  <h1 class="text-center"><%=t('source-page.title') %></h1>
+  <%= link_to t('source-page.form-new'), new_post_path, :class => "btn btn-primary right" %>
 <% else %>
-<h1 class="text-center">信息资源</h1>
+<h1 class="text-center"><%=t('nav.source') %></h1>
 <% end %>
 
 <ul>
-<% @posts.each do |post| %>
-  <h3><%= link_to post.title, post %></h3>
-  <div><%= post.body %><div>
-  <div class="right"><%= link_to '[查看所有]', post %></div>
-  <br/>
-<% end %>
+  <% @posts.each do |post| %>
+    <h3><%= link_to post.title, post %></h3>
+    <div><%= post.body %><div>
+    <div class="right"><%= link_to t('source-page.viewall'), post %></div>
+    <br/>
+  <% end %>
 </ul>
 
 <br />

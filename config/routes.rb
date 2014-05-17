@@ -5,8 +5,8 @@ Blog::Application.routes.draw do
   get "log_out" => "sessions#destroy", :as => "log_out"
 
   # If you want to create a new username and password, please uncomment the following two lines out.
-  # get "sign_up" => "users#new", :as => "sign_up"
-  # resources :users
+  get "sign_up" => "users#new", :as => "sign_up"
+  resources :users
   resources :sessions
 
   resources :posts do

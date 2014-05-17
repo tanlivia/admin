@@ -2,4 +2,30 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  nav:
+    brand: "Bing Zhang"
+    home: "Home"
+    about: "About"
+    service: "Service"
+    case: "Case"
+    source: "Source"
+    contact: "Contact"
+
+  source-page:
+    title: "Admin:Edit, Update, Delete Articles"
+    viewall: "[View All]"
+    edit-content: "Editing Content"
+    form-title: "Title"
+    form-content: "Content"
+    form-submit: "Submit"
+    form-new: "Create New Article"
+    back: "Back To Articles List"
+    comment-title: "Leave comment"
+    comment-new: "New Message"
+    comment-submit: "Submit Message"
+
+  global:
+    edit: "Edit"
+    delete: "Delete"
+    update: "Update"
+    show: "Show"

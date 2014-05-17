@@ -23,5 +23,11 @@
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation %>
   </p>
+  <p>
+    <%= f.label :locale, 'Prefer Language' %><br />
+    <%= f.radio_button :locale, 'en', :checked => true %> English
+    <%= f.radio_button :locale, 'zh' %> 中文
+  </p>
+
   <p class="button"><%= f.submit %></p>
 <% end %>

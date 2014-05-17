@@ -2,21 +2,21 @@
 
 <%= render :partial => @post %>
 
-<%= link_to '返回文章列表', posts_path, :class => 'btn btn-primary'  %>
+<%= link_to t('source-page.back'), posts_path, :class => 'btn btn-primary'  %>
 <% if current_user %> 
-<span><%= link_to '编辑', edit_post_path(@post), :class => 'btn btn-primary' %> </span>
-<span class="inline"><%= button_to "删除", post_path(@post), {:method => :delete, :class => 'btn btn-danger right'} %></span>
+<span><%= link_to t('global.edit'), edit_post_path(@post), :class => 'btn btn-primary' %> </span>
+<span class="inline"><%= button_to t('global.delete'), post_path(@post), {:method => :delete, :class => 'btn btn-danger right'} %></span>
 <br />
 <% end %>
 <br/>
-<h2>欢迎留言</h2>
+<h2><%=t('source-page.comment-title') %></h2>
 <div id="comments">
   <%= render :partial => @post.comments %>
 </div>
 <%= form_for [@post, Comment.new] do |f| %>
   <p>
-    <%= f.label :body, "写在此处" %><br/>
+    <%= f.label :body, t('source-page.comment-new') %><br/>
     <%= f.text_area :body, :class=>"form-control", :rows => 3 %>
   </p>
-  <button type="submit" class="btn btn-primary">发表留言</button>
+  <button type="submit" class="btn btn-primary"><%=t('source-page.comment-submit') %></button>
 <% end %>
