@@ -11,7 +11,6 @@
       <driver-ref>postgresql</driver-ref>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://ec2-54-225-168-181.compute-1.amazonaws.com:5432/dsnujrugh8j8k</jdbc-url>
-      <user-name>tbnnxcacbdkero</user-name>
       <libraries />
     </data-source>
     <data-source source="LOCAL" name="Rails blog: test" uuid="8b25c3ca-8a48-46e6-a8e0-a1118a384c14">

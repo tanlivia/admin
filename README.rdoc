@@ -6,6 +6,10 @@ version since the customer request. Will add I18n latter for international langu
 Before deploy, configure your own google map key and put to app/views/static/contact.html.erb file.
       https://www.google.com/maps/embed/v1/place?q=16%20Southwood%20Drive%2C%20Orinda%2C%20CA%2094563&key=..."
 
+== Run Test
+This template using Rspec-rails, FactoryGirl, Shoulda, and Capybara for unit test, functional test, and integration test. In order to run test, please using:
+        $ bundle exec rspec
+
 == Deploy to Heroku
 The database is using default SQLITE3 because of the light data. You can deploy to
 heroku (have to use PostgreSQL for production). In order to deploy to heroku, please 
