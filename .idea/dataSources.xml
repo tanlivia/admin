@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="3972915484">
+    <data-source source="LOCAL" name="Rails blog: development" uuid="edf7231f-ae20-48a9-81f7-71ab00861445">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/db/development.sqlite3</jdbc-url>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails blog: production" uuid="ec47a1e1-6aa3-465d-b2f6-9fdacc1ba721">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://ec2-54-225-168-181.compute-1.amazonaws.com:5432/dsnujrugh8j8k</jdbc-url>
+      <user-name>tbnnxcacbdkero</user-name>
+      <user-password>dffddffedfe5dfcfdfdadf99dfc5dffedfcedfcddfe9dfc2dfc3df93dff3dfdcdf9bdf93dff9dfd9df9bdfeddf9edfdadfe0dfc5</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails blog: test" uuid="8b25c3ca-8a48-46e6-a8e0-a1118a384c14">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/db/test.sqlite3</jdbc-url>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+

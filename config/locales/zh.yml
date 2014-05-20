@@ -26,3 +26,8 @@ zh:
     delete: "删除"
     update: "更新"
     show: "显示"
+
+  activerecord:
+    errors:
+      messages:
+        record_invalid: "无效"
